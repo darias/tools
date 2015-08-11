@@ -1,0 +1,9 @@
+{
+  "_executable": "/home/ec2-user/darias/proto/daemon.sh",
+
+  "daemon.sh": {
+    "--processes": "5",
+    "--plimit": "3",
+    "--sleep": "5"
+  }
+}

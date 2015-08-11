@@ -1,0 +1,46 @@
+{
+  "_executable": "/home/ec2-user/darias/kafkacat/kafkacat",
+
+  "consume-one": {
+    "-b": "172.28.4.51:9092,172.28.4.52:9092,172.28.4.53:9092",
+    "-C": "",
+    "-c": "1",
+    "-e": "",
+    "-t": "fsix-N10000",
+    "-p": "0",
+    "-f": "%s",
+    "-X": "topic.group.id=darias",
+    "-o": "stored",
+    "-X": "topic.offset.store.path=kafka-offsets",
+    "-X": "fetch.message.max.bytes=8048576",
+    "-X": "topic.offset.store.sync.interval.ms=0",
+    "-X": "topic.offset.store.method=file",
+    "-X": "topic.auto.offset.reset=smallest"
+
+  },
+
+  "list-all": {
+    "-b": "172.28.4.51:9092,172.28.4.52:9092,172.28.4.53:9092",
+    "-L": ""
+  },
+
+  "show-config": {
+    "-X": "list"
+  },
+
+  "_help": {
+    "-C": "Consume",
+    "-P": "Produce",
+    "-L": "List metadata",
+    "-t": "Topic <topic>",
+    "-p": "Partition <partition>",
+    "-b": "Brokers <host[:port],...>",
+    "-D": "Message delimiter character <a-z.. | \\r | \\n | \\t | \\xNN default \\n>",
+    "-K": "Key delimiter character <a-z.. | \\r | \\n | \\t | \\xNN default \\n>",
+    "-c": "Limit message count <n>",
+    "-X": "librdkafka configuration properties <list | prop=val | dump>",
+    "-d": "Enable librdkafka debugging <dbg1,...>",
+    "-q": "Quiet",
+    "-v": "Verbose"
+  }
+}
